@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/text_headling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dip"
+        android:gravity="center_horizontal"
+        android:text="录音内容!" 
+        android:textSize="30px"
+        />
+
+    <ProgressBar
+        android:id="@+id/myProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:max="100"
+        android:orientation="horizontal"
+        android:progress="20"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressBarStyle="@android:style/Widget.ProgressBar.Horizontal" 
+        android:layout_above="@+id/btn_record_before"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btn_record_before"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_record_stop"
+        android:layout_marginBottom="20dip"
+        android:text="重录上一句"
+        android:textSize="30px"
+         />
+
+    <Button
+        android:id="@+id/btn_record_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_record_start"
+        android:layout_marginBottom="20dip"
+        android:text="结束录音" 
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_record_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dip"
+        android:textSize="30px"
+        android:text="开始录音" />
+
+</RelativeLayout>

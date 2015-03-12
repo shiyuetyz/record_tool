@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15px"
+        android:text="输入名称：" 
+        />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_below="@id/text_name"
+        android:background="@drawable/edit_style" 
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/text_wenben"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_name"
+        android:textSize="15px"
+        android:text="选择录音文本"
+         />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_wenben"
+        />
+
+    <LinearLayout
+        android:id="@+id/command_bi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/text_number"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:text="command领域占比（general:poi:wakeup）" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_marginTop="15dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="general数:" />
+
+            <EditText
+                android:id="@+id/general_num"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/edit_style"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_marginTop="15dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="poi数:" />
+
+            <EditText
+                android:id="@+id/poi_num"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" 
+                android:background="@drawable/edit_style"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_marginTop="15dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="wakeup数:" />
+
+            <EditText
+                android:id="@+id/wakeup_num"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/edit_style"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/group"
+        android:text="是否选择领域划分:" 
+        />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_start"
+         >
+
+        <RadioButton
+            android:id="@+id/radiobutton_1"
+            android:visibility="gone"
+            android:text="分领域" />
+
+        <RadioButton
+            android:id="@+id/radiobutton_2"
+            android:checked="true"
+            android:text="不分领域" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dip"
+        android:textSize="20px"
+        android:text="确定开始" 
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
